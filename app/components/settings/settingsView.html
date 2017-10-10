@@ -1,0 +1,16 @@
+<div class="panel panel-default">
+<div class="panel-heading">Einstellungen</div>
+  <div class="panel-body">
+   	<div class="message" ng-hide="$ctrl.selectedRow == $ctrl.activeRowIndex || $ctrl.selectedRow == $ctrl.activeRowIndex+1">Keine Einstellungen gefunden.<br/><br/>Bitte wähle die aktive Medien-Datei oder die nächste in der Tabelle aus, um EInstellungsmöglichkeiten zu erhalten.</div>
+   	<!--<size size="$ctrl.size" selected-row="$ctrl.selectedRow" ng-show="$ctrl.extension == 'avi' && ($ctrl.selectedRow == $ctrl.activeRowIndex || $ctrl.selectedRow == $ctrl.activeRowIndex+1)">
+   	</size>-->
+
+<size size="$ctrl.size" selected-row="$ctrl.selectedRow" active-row-index="$ctrl.activeRowIndex">
+   	</size>
+
+  	<!--<position position="$ctrl.position"  selected-row="$ctrl.selectedRow" ng-show="$ctrl.media[$ctrl.selectedRow].type == 'L' && ($ctrl.selectedRow == $ctrl.activeRowIndex || $ctrl.selectedRow == $ctrl.activeRowIndex+1)"></position>-->
+
+  	<position position="$ctrl.position"  selected-row="$ctrl.selectedRow"></position>
+  </div>
+</div>
+</div>

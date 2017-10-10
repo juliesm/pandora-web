@@ -1,0 +1,43 @@
+
+<div class="container">
+<table id="active" class="table table-striped">
+    <!-- table caption will be displayed here -->
+      <thead>
+      <th>Active</th>
+      </thead>
+    <!-- media files will be displayed here-->
+    <tbody>
+    <tr class="playlist" ng-repeat="media in $ctrl.media">
+      <td heigth="54px"><div class="active" ng-show="$ctrl.activeRowIndex == $ctrl.media.indexOf(media)"><i class="fa fa-play"></i></div></td>
+      <td class="media-name" height="54px">{{ media.name }}</td>
+    </tr>
+    </tbody>
+  </table>
+  <table id="sort" class="table table-striped table-hover sortable">
+    <!-- table caption will be displayed here -->
+      <thead>
+      <th colspan="3">Datei</th>
+      <th>Größe</th>
+      <th>Position</th>
+      <th></th>
+      <th></th>
+      </thead>
+    <!-- media files will be displayed here-->
+    <tbody>
+    <tr class="playlist" ng-repeat="media in $ctrl.media" ng-class="{selected: $ctrl.media.indexOf(media) == $ctrl.selectedRow}" ng-click="$ctrl.setClickedRow($ctrl.media.indexOf(media))">
+      <td><i class="fa fa-{{ $ctrl.myExtension($ctrl.getExtension(media.name)) }}"></i></td>
+      <td><div class="thumbnail-container"><img src="{{ media.imageUrl }}"/></div></td>
+      <td>{{ media.name }}</td>
+      <td><div ng-show="$ctrl.selectedRow == $index && $ctrl.media[$ctrl.selectedRow].type == 'L'">{{ $ctrl.size }}</div></td>
+      <td><div ng-show="$ctrl.selectedRow == $index && $ctrl.media[$ctrl.selectedRow].type == 'L'">{{ $ctrl.position }}</div></td>
+      <td><div ng-show="$ctrl.selectedRow == $index" ng-click="$ctrl.removeRow($ctrl.selectedRow)"><i class="fa fa-times"></i></div></td>
+      <td><div ng-show="$ctrl.selectedRow == $index" ng-click="$ctrl.removeRow($ctrl.selectedRow)"><i class="fa fa-arrows"></i></div></td>
+    </tr>
+    </tbody>
+  </table>
+
+<button class="btn btn-dark media" ng-click="$ctrl.getMedia()"><i class="fa fa-refresh" aria-hidden="true"></i> Update Media</button>
+
+</div> 
+
+

@@ -1,0 +1,7 @@
+<div class="panel panel-default">
+<div class="panel-heading">Einstellungen</div>
+  <div class="panel-body">
+   	<div class="message" ng-show="$ctrl.selectedRow == $ctrl.activeRowIndex || $ctrl.selectedRow == $ctrl.activeRowIndex+1">Keine Einstellungsmöglichkeiten gefunden.<br><br>In dieser Sendung nur für Typ 'Live Input' möglich.</div>
+   	<div class="message" ng-hide="$ctrl.media[$ctrl.selectedRow].type == 'L' && ($ctrl.selectedRow == $ctrl.activeRowIndex || $ctrl.selectedRow == $ctrl.activeRowIndex+1)">Bitte wähle die aktive Zeile oder die nachfolgende aus.</div>
+  </div>
+</div>

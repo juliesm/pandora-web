@@ -1,0 +1,10 @@
+<div class="panel panel-default">
+  <div class="panel-heading settings-inner">Größe</div>
+  	<button class="save" ng-click="$ctrl.save($ctrl.size)">{{ $ctrl.button }}</button>
+    <div class="panel-body">
+      <input id="slider" ng-model="$ctrl.size" ng-change="$ctrl.changeButton()" type="range" min="0" max="100" step="10" value="30"/>
+            <p class="size">{{ $ctrl.size }}%</p>
+    </div>
+</div>
+
+

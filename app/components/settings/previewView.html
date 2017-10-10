@@ -1,0 +1,10 @@
+
+<div class="preview">
+<div class="buttons">
+<button class="btn-dark" ng-init="nextView=false" ng-click="nextView=false" ng-class="{active: nextView == false}">Live</button>
+<button class="btn-dark" ng-init="naxtView=true" ng-click="nextView=true" ng-class="{active: nextView == true}">Next</button>
+</div>
+	<img src="{{$ctrl.media[$ctrl.activeRowIndex].imageUrl}}" ng-hide="nextView"/>
+	<img src="{{$ctrl.media[$ctrl.activeRowIndex+1].imageUrl}}" ng-show="nextView"/>
+</div>
+

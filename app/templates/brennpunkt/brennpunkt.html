@@ -1,0 +1,27 @@
+<app name="'Brennpunkt'"></app>
+<div class="main">
+<div class="row loop">
+  <loops class="loops"></loops>
+</div>
+
+<div class="row">
+  <div class="col-md-3">
+      <nosettings  ng-hide="$ctrl.media[$ctrl.selectedRow].type == 'L' && ($ctrl.selectedRow == $ctrl.activeRowIndex || $ctrl.selectedRow == $ctrl.activeRowIndex+1)" active-row-index="$ctrl.activeRowIndex" selected-row="$ctrl.selectedRow" media="$ctrl.media"></nosettings>
+      <!--<size size="$ctrl.size" selected-row="$ctrl.selectedRow" active-row-index="$ctrl.activeRowIndex" active-layer="$ctrl.activeLayer" inactive-layer="$ctrl.inactiveLayer" ng-show="$ctrl.media[$ctrl.selectedRow].type == 'L' && ($ctrl.selectedRow == $ctrl.activeRowIndex || $ctrl.selectedRow == $ctrl.activeRowIndex+1)">
+      </size>-->
+      <size size="$ctrl.size" selected-row="$ctrl.selectedRow" active-row-index="$ctrl.activeRowIndex" active-layer="$ctrl.activeLayer" inactive-layer="$ctrl.inactiveLayer" ng-show="$ctrl.media[$ctrl.selectedRow].type == 'L' && ($ctrl.selectedRow == $ctrl.activeRowIndex || $ctrl.selectedRow == $ctrl.activeRowIndex+1)">
+      </size>
+      <!--<position position="$ctrl.position"  selected-row="$ctrl.selectedRow" active-layer="$ctrl.activeLayer" inactive-layer="$ctrl.inactiveLayer"  active-row-index="$ctrl.activeRowIndex"></position>-->
+      <position position="$ctrl.position"  selected-row="$ctrl.selectedRow" active-row-index="$ctrl.activeRowIndex" active-layer="$ctrl.activeLayer" inactive-layer="$ctrl.inactiveLayer" ng-show="$ctrl.media[$ctrl.selectedRow].type == 'L' && ($ctrl.selectedRow == $ctrl.activeRowIndex || $ctrl.selectedRow == $ctrl.activeRowIndex+1)"></position>
+  </div>
+  <div class="col-md-6">
+      <preview media="$ctrl.media" active-row-index="$ctrl.activeRowIndex" selected-row="$ctrl.selectedRow"></preview>
+      <playlist size="$ctrl.size" position="$ctrl.position" selected-row="$ctrl.selectedRow" active-row-index="$ctrl.activeRowIndex" media="$ctrl.media" is-disabled-1="$ctrl.isDisabled1" is-disabled-2="$ctrl.isDisabled2" images-array="$ctrl.imagesArray" update-media="$ctrl.getMeTheMedia()"></playlist>
+  </div>
+  <div class="col-md-3 right">
+      <upload media="$ctrl.media"></upload>
+      <play selected-row="$ctrl.selectedRow" active-row-index="$ctrl.activeRowIndex" media="$ctrl.media" active-layer="$ctrl.activeLayer" inactive-layer="$ctrl.inactiveLayer"></play>
+      <live media="$ctrl.media" is-disabled-1="$ctrl.isDisabled1" is-disabled-2="$ctrl.isDisabled2" selected-row="$ctrl.selectedRow"></live>
+  </div>
+</div>
+</div>

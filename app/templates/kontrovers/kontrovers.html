@@ -1,0 +1,26 @@
+<app name="'Kontrovers'"></app>
+<div class="main">
+<div class="row loop">
+  <loops class="loops"></loops>
+</div>
+
+<div class="row">
+  <div class="col-md-3">
+      <nosettings  ng-hide="$ctrl.media[$ctrl.selectedRow].type == 'L'"></nosettings>
+      <!--<size size="$ctrl.size" selected-row="$ctrl.selectedRow" active-row-index="$ctrl.activeRowIndex" active-layer="$ctrl.activeLayer" inactive-layer="$ctrl.inactiveLayer">
+      </size>-->
+      <position position="$ctrl.position"  selected-row="$ctrl.selectedRow" ng-show="$ctrl.media[$ctrl.selectedRow].type == 'L'" active-row-index="$ctrl.activeRowIndex"></position>
+      <bauchbinde ng-show="$ctrl.media[$ctrl.selectedRow].type == 'L'"></bauchbinde>
+      <frame></frame>
+  </div>
+  <div class="col-md-6">
+      <preview media="$ctrl.media" active-row-index="$ctrl.activeRowIndex" selected-row="$ctrl.selectedRow"></preview>
+      <playlist size="$ctrl.size" position="$ctrl.position" selected-row="$ctrl.selectedRow" active-row-index="$ctrl.activeRowIndex" media="$ctrl.media" is-disabled-1="$ctrl.isDisabled1" is-disabled-2="$ctrl.isDisabled2"></playlist>
+  </div>
+  <div class="col-md-3 right">
+      <upload></upload>
+      <play selected-row="$ctrl.selectedRow" active-row-index="$ctrl.activeRowIndex" media="$ctrl.media" active-layer="$ctrl.activeLayer" inactive-layer="$ctrl.inactiveLayer"></play>
+      <live media="$ctrl.media" is-disabled-1="$ctrl.isDisabled1" is-disabled-2="$ctrl.isDisabled2" selected-row="$ctrl.selectedRow"></live>
+  </div>
+</div>
+</div>

@@ -1,0 +1,20 @@
+<div class="panel panel-default">
+<div class="panel-heading">Bauchbinde</div>
+<button class="save" ng-click="$ctrl.save($ctrl.position)">{{ $ctrl.button }}</button>
+  <div class="panel-body">
+    <div class="form-group">
+        <div class="radio radio-inline">
+                <input id="bb-1" type="radio" name="position" value="H" ng-model="$ctrl.position" ng-change="$ctrl.changeButton()"/>
+                <label for="bb-1"><span class="radio-class">Heller</span></label>
+        </div>
+        <div class="radio radio-inline">
+                <input id="bb-2" type="radio" name="position" value="B" ng-model="$ctrl.position" ng-change="$ctrl.changeButton()"/>
+                <label for="bb-2"><span class="radio-class">Bachmann</span></label>
+        </div>
+        <div class="radio radio-inline">
+                <input id="bb-3" type="radio" name="position" value="3" ng-model="$ctrl.position" ng-change="$ctrl.changeButton()"/>
+                <label for="bb-3"><span class="radio-class">ID3</span></label>
+        </div>
+    </div>
+  </div>
+  </div>

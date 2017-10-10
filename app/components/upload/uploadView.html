@@ -1,0 +1,36 @@
+<!--
+
+<input type="file" nv-file-select uploader="$ctrl.uploader"/><br/>
+        <ul>
+            <li ng-repeat="item in $ctrl.uploader.queue">
+                Name: <span ng-bind="item.file.name"></span><br/>
+                <button ng-click="item.upload()">upload</button>
+            </li>
+        </ul>
+        -->
+       
+<button type="button" class="btn btn-dark load" ng-click="$ctrl.showModal()">Laden</button>
+
+<div class="moodal" ng-show="$ctrl.modalVisible">
+	<div class="moodal-inner">
+		<div class="close" ng-click="$ctrl.close()"><i class="fa fa-close"></i></div>
+		<div class="modal-header">
+            <h3 class="modal-title" id="modal-title">Dateien hochladen</h3>
+        </div>
+        <div class="modal-body" id="modal-body">
+           <input type="file" id="upload" name="file" onchange="angular.element(this).scope().uploadFiles(this)" multiple/>
+				<li ng-repeat="name in $ctrl.filenames">
+    				{{name}}
+    			</li>
+    			
+        <button class="btn btn-dark" ng-click="$ctrl.upload()" ng-if="$ctrl.toUpload">Hochladen</button>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-dark" type="button" ng-if="$ctrl.uploaded" ng-click="$ctrl.update()">Update Playliste</button>
+		</div>
+	</div>
+</div>
+
+<!--Image: <img src="{{ $ctrl.path }}">-->
+
+
