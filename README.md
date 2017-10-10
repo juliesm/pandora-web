@@ -5,5 +5,3 @@ Install
 ----------
 
 Run <code>npm install</code> to install all required dependencies.
-
-Open <code>index.html</code> to view.
