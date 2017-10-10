@@ -5,3 +5,9 @@ Install
 ----------
 
 Run <code>npm install</code> to install all required dependencies.
+
+
+Pandoras Box Automation SDK
+------------------------------
+
+https://github.com/PandorasBoxSDK/pbauto-javascript-browser
